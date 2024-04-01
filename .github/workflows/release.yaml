@@ -42,6 +42,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: dist
+        path: dist
     - name: Publish GitHub release
       uses: softprops/action-gh-release@v1
       with:
