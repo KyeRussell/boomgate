@@ -4,16 +4,12 @@ build-backend = "hatchling.build"
 
 [project]
 name = "boomgate"
-authors = [
-    { name="Kye Russell", email="me@kye.id.au" }
-]
+authors = [{ name = "Kye Russell", email = "me@kye.id.au" }]
 description = "A software supply chain risk management tool"
 readme = "README.md"
-license = {file = "LICENSE"}
+license = { file = "LICENSE" }
 requires-python = ">=3.11"
-dependencies = [
-
-]
+dependencies = ["typer", "rich", "httpx"]
 classifiers = [
     "Development Status :: 1 - Planning",
     "Environment :: Console",
@@ -28,10 +24,7 @@ keywords = ["security", "dependency", "supply chain"]
 dynamic = ["version"]
 
 [project.optional-dependencies]
-dev = [
-    "ruff",
-    "pre-commit",
-]
+dev = ["ruff", "pre-commit", "mypy"]
 
 [project.scripts]
 boomgate = "boomgate.cli:main"
