@@ -43,11 +43,6 @@ jobs:
       with:
         name: dist
         path: dist
-    - name: Publish GitHub release
-      uses: softprops/action-gh-release@v1
-      with:
-        files: dist/*
-        fail_on_unmatched_files: true
     - name: Publish package distributions to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
   release-github:
