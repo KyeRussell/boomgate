@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "boomgate"
+authors = [
+    { name="Kye Russell", email="me@kye.id.au" }
+]
+description = "A software supply chain risk management tool"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.11"
+dependencies = [
+
+]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Environment :: Console",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Natural Language :: English",
+    "Topic :: Security",
+    "Topic :: Software Development",
+    "Topic :: System :: Archiving :: Packaging",
+    "Topic :: Utilities",
+]
+keywords = ["security", "dependency", "supply chain"]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "pre-commit",
+]
+
+[project.scripts]
+boomgate = "boomgate.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/KyeRussell/boomgate"
+Issues = "https://github.com/KyeRussell/boomgate/issues"
+
+[tool.hatch.version]
+path = "src/boomgate/__about__.py"
