@@ -1,5 +1,5 @@
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
 [project]
@@ -34,7 +34,10 @@ Homepage = "https://github.com/KyeRussell/boomgate"
 Issues = "https://github.com/KyeRussell/boomgate/issues"
 
 [tool.hatch.version]
-path = "src/boomgate/__about__.py"
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "_version.py"
 
 [tool.hatch.build.targets.sdist]
 include = ["src/*", "LICENSE"]
