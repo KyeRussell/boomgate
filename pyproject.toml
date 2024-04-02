@@ -24,7 +24,7 @@ keywords = ["security", "dependency", "supply chain"]
 dynamic = ["version"]
 
 [project.optional-dependencies]
-dev = ["ruff", "pre-commit", "mypy", "build", "hatch"]
+dev = ["ruff", "pre-commit", "mypy", "build", "hatch", "pytest", "pytest-cov"]
 docs = ["sphinx", "shibuya", "myst-parser"]
 
 [project.scripts]
@@ -46,3 +46,7 @@ version-file = "src/__version__.py"
 [tool.hatch.build.targets.sdist]
 include = ["src/*", "LICENSE"]
 exclude = ["*.json", "pkg/_compat.py"]
+
+[tool.pytest.ini_options]
+minversion = "8.1.1"
+addopts = "--cov=src --cov-report html"

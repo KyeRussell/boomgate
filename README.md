@@ -48,3 +48,9 @@ uv pip install -e . -r pyproject.toml --extra=dev --extra=docs
 ```
 
 This will install the project in editable mode with all development dependencies.
+
+### Running tests
+
+```bash
+pytest
+```

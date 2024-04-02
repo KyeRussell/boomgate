@@ -9,8 +9,8 @@ permissions:
   contents: read
 
 jobs:
-  build-python:
-    name: Build package distributions
+  test-and-build:
+    name: Test and build package
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -23,6 +23,12 @@ jobs:
           uv-venv: venv
       - name: Install dependencies
         run: uv pip install  -e . -r pyproject.toml --extra=dev build
+      - name: Run tests
+        run: pytest
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
       - name: Build package
         run: python -m build
       - name: Upload package distributions as artifacts
@@ -33,7 +39,7 @@ jobs:
   release-pypi:
     name: Publish PyPI release
     runs-on: ubuntu-latest
-    needs: build-python
+    needs: test-and-build
     environment:
       name: pypi
       url: https://pypi.org/p/boomgate
@@ -50,7 +56,7 @@ jobs:
   release-github:
     name: Publish GitHub release
     runs-on: ubuntu-latest
-    needs: build-python
+    needs: test-and-build
     permissions:
       contents: write
     steps:
