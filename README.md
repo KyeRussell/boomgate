@@ -6,9 +6,7 @@
 <p align="center">
     <a href="https://pypi.org/project/boomgate/"><img src="https://img.shields.io/pypi/v/boomgate?color=%2334D058&label=PyPI%20package" alt="PyPI version"></a>
     <a href="https://boomgate.readthedocs.io"><img src="https://readthedocs.org/projects/boomgate/badge/" alt="Documentation on Read The Docs"></a>
-    <a href="https://codecov.io/gh/KyeRussell/boomgate" >
-    <img src="https://codecov.io/gh/KyeRussell/boomgate/graph/badge.svg?token=2XY75VWMGK"/>
-    </a>
+    <a href="https://codecov.io/gh/KyeRussell/boomgate" ><img src="https://codecov.io/gh/KyeRussell/boomgate/graph/badge.svg?token=2XY75VWMGK"></a>
     <a href="https://github.com/KyeRussell/boomgate/actions/workflows/release.yaml"><img src="https://github.com/KyeRussell/boomgate/actions/workflows/release.yaml/badge.svg" alt="Release workflow status"></a>
 </p>
 
