@@ -14,14 +14,13 @@
 
 ---
 
-> [!IMPORTANT]
-> This project is not remotely ready for anyone to look at, let alone use. It is in a
-> very early proof-of-concept stage, focusing on iterative research and development. I
-> have not settled on the project's architecture, and I am still exploring the problem
-> space. As such, the quality of the code is very poor, and things are guaranteed to
-> change.
->
-> I will not provide support, nor will I accept PRs at this time.
+This project is not remotely ready for anyone to look at, let alone use. It is in a
+very early proof-of-concept stage, focusing on iterative research and development. I
+have not settled on the project's architecture, and I am still exploring the problem
+space. As such, the quality of the code is very poor, and things are guaranteed to
+change.
+
+I will not provide support, nor will I accept PRs at this time.
 
 ---
 
@@ -45,10 +44,10 @@ See my rough list of idea in the
 
 ## Developing
 
-To get started, clone the repository and run the following command:
+Clone the repository and run the following command:
 
 ```bash
-uv pip install -e . -r pyproject.toml --extra=dev
+uv pip install -e . -r pyproject.toml --extra=dev --extra=docs
 ```
 
 This will install the project in editable mode with all development dependencies.

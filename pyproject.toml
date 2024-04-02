@@ -25,12 +25,16 @@ dynamic = ["version"]
 
 [project.optional-dependencies]
 dev = ["ruff", "pre-commit", "mypy", "build", "hatch"]
+docs = ["sphinx", "shibuya", "myst-parser"]
 
 [project.scripts]
 boomgate = "boomgate.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/KyeRussell/boomgate"
+Homepage = "https://boomgate.readthedocs.org"
+Documentation = "https://boomgate.readthedocs.org"
+Changelog = "https://boomgate.readthedocs.org/changelog.html"
+Repository = "https://github.com/KyeRussell/boomgate"
 Issues = "https://github.com/KyeRussell/boomgate/issues"
 
 [tool.hatch.version]
