@@ -31,9 +31,9 @@ docs = ["sphinx", "shibuya", "myst-parser"]
 boomgate = "boomgate.cli:main"
 
 [project.urls]
-Homepage = "https://boomgate.readthedocs.org"
-Documentation = "https://boomgate.readthedocs.org"
-Changelog = "https://boomgate.readthedocs.org/changelog.html"
+Homepage = "https://boomgate.readthedocs.io"
+Documentation = "https://boomgate.readthedocs.io"
+Changelog = "https://boomgate.readthedocs.io/en/latest/CHANGELOG.html"
 Repository = "https://github.com/KyeRussell/boomgate"
 Issues = "https://github.com/KyeRussell/boomgate/issues"
 
