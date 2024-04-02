@@ -14,8 +14,6 @@
 
 ---
 
-## ⚠️ This is in a pre-pre-pre-release state! ⚠️
-
 > [!IMPORTANT]
 > This project is not remotely ready for anyone to look at, let alone use. It is in a
 > very early proof-of-concept stage, focusing on iterative research and development. I
@@ -24,6 +22,8 @@
 > change.
 >
 > I will not provide support, nor will I accept PRs at this time.
+
+---
 
 ## Vision
 
