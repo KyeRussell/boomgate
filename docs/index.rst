@@ -6,6 +6,7 @@
    :caption: Contents:
 
    CHANGELOG
+   CONTRIBUTING
 
 
 Indices and tables

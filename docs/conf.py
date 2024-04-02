@@ -15,7 +15,7 @@ html_theme_options = {
     "accent_color": "ruby",
     "nav_links": [
         {"title": "GitHub", "url": "https://github.com/KyeRussell/boomgate"},
-        {"title": "PyPI", "url": "https://pypi.org/projects/boomgate"},
+        {"title": "PyPI", "url": "https://pypi.org/project/boomgate"},
     ],
 }
 
