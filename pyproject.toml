@@ -37,7 +37,7 @@ Issues = "https://github.com/KyeRussell/boomgate/issues"
 source = "vcs"
 
 [tool.hatch.build.hooks.vcs]
-version-file = "_version.py"
+version-file = "src/__version__.py"
 
 [tool.hatch.build.targets.sdist]
 include = ["src/*", "LICENSE"]
