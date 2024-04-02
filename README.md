@@ -10,6 +10,9 @@
     <a href="https://github.com/KyeRussell/boomgate/actions/workflows/release.yaml">
         <img src="https://github.com/KyeRussell/boomgate/actions/workflows/release.yaml/badge.svg" alt="Release workflow status">
     </a>
+    <a href="https://boomgate.readthedocs.io">
+        <img src="https://readthedocs.org/projects/boomgate/badge/" alt="Documentation on Read The Docs">
+    </a>
 </p>
 
 ---
