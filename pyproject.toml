@@ -24,7 +24,7 @@ keywords = ["security", "dependency", "supply chain"]
 dynamic = ["version"]
 
 [project.optional-dependencies]
-dev = ["ruff", "pre-commit", "mypy", "build"]
+dev = ["ruff", "pre-commit", "mypy", "build", "hatch"]
 
 [project.scripts]
 boomgate = "boomgate.cli:main"
@@ -35,3 +35,7 @@ Issues = "https://github.com/KyeRussell/boomgate/issues"
 
 [tool.hatch.version]
 path = "src/boomgate/__about__.py"
+
+[tool.hatch.build.targets.sdist]
+include = ["src/*", "LICENSE"]
+exclude = ["*.json", "pkg/_compat.py"]
