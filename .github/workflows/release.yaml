@@ -48,6 +48,8 @@ jobs:
   release-github:
     runs-on: ubuntu-latest
     needs: release-pypi
+    permissions:
+      contents: write
     steps:
     - name: Download distributions
       uses: actions/download-artifact@v4
