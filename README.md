@@ -5,7 +5,7 @@
 
 <p align="center">
     <a href="https://pypi.org/project/boomgate/">
-        <img src="https://img.shields.io/pypi/v/boomgate?color=%2334D058&label=pypi%20package" alt="PyPI version">
+        <img src="https://img.shields.io/pypi/v/boomgate?color=%2334D058&label=PyPI%20package" alt="PyPI version">
     </a>
     <a href="https://github.com/KyeRussell/boomgate/actions/workflows/release.yaml">
         <img src="https://github.com/KyeRussell/boomgate/actions/workflows/release.yaml/badge.svg" alt="Release workflow status">
