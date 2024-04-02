@@ -62,9 +62,8 @@ jobs:
     - name: Determine if the tag is a pre-release
       id: prerelease_check
       run: |
-        TAG_NAME=$(git describe --tags --abbrev=0)
-        echo "Current tag is $TAG_NAME"
-        if [[ $TAG_NAME =~ (a|b|rc)[0-9]+$ ]]; then
+        # Check if the tag matches the pre-release pattern
+        if [[ ${GITHUB_REF_NAME} =~ (a|b|rc)[0-9]+$ ]]; then
           echo "::set-output name=prerelease::true"
         else
           echo "::set-output name=prerelease::false"
