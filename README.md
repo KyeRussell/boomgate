@@ -1,4 +1,4 @@
-<h2 align="center">Boomgate</h2>
+<h1 align="center">Boomgate</h1>
 <p align="center"><em>
     Identify and mitigate the risks of using third-party libraries.
 </em></p>
