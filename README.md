@@ -1,16 +1,29 @@
-# boomgate
+<h2 align="center">Boomgate</h2>
+<p align="center"><em>
+    Identify and mitigate the risks of using third-party libraries.
+</em></p>
 
-Boomgate helps you identify and mitigate the risks of using third-party libraries in
-your Python projects.
+<p align="center">
+    <a href="https://pypi.org/project/boomgate/">
+        <img src="https://img.shields.io/pypi/v/boomgate?color=%2334D058&label=pypi%20package" alt="PyPI version">
+    </a>
+    <a href="https://github.com/KyeRussell/boomgate/actions/workflows/release.yaml">
+        <img src="https://github.com/KyeRussell/boomgate/actions/workflows/release.yaml/badge.svg" alt="Release workflow status">
+    </a>
+</p>
+
+---
 
 ## ⚠️ This is in a pre-pre-pre-release state! ⚠️
 
-This project is not remotely ready for anyone to look at, let alone use. It is in a very
-early proof-of-concept stage, focusing on iterative research and development. I have not
-settled on the project's architecture, and I am still exploring the problem space. As
-such, the quality of the code is very poor, and things are guaranteed to change.
-
-I will not provide support, nor will I accept PRs at this time.
+> [!IMPORTANT]
+> This project is not remotely ready for anyone to look at, let alone use. It is in a
+> very early proof-of-concept stage, focusing on iterative research and development. I
+> have not settled on the project's architecture, and I am still exploring the problem
+> space. As such, the quality of the code is very poor, and things are guaranteed to
+> change.
+>
+> I will not provide support, nor will I accept PRs at this time.
 
 ## Vision
 
