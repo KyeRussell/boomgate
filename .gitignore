@@ -161,3 +161,5 @@ cython_debug/
 
 /.request_cache
 /src/__version__.py
+.DS_Store
+/.vscode/settings.json
