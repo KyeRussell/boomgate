@@ -9,7 +9,7 @@ import httpx
 @dataclasses.dataclass(slots=True)
 class Package:
     name: str
-    versions: "dict[str, Version]" = dataclasses.field(default_factory=dict)
+    versions: "dict[str, PyPIVersion]" = dataclasses.field(default_factory=dict)
     license: str | None = None
     homepage_url: str | None = None
     ecosystem_url: str | None = None
@@ -21,7 +21,7 @@ class Package:
 
 
 @dataclasses.dataclass(slots=True)
-class Version:
+class PyPIVersion:
     number: str
     releases: "list[Release]" = dataclasses.field(default_factory=list)
     vulnerabilities: list[Vulnerability] = dataclasses.field(default_factory=list)
@@ -63,7 +63,7 @@ class PyPI(Ecosystem):
             response.raise_for_status()
             response_json = response.json()
 
-            version = Version(number=version_number)
+            version = PyPIVersion(number=version_number)
 
             # Vulnerabilities.
             for vulnerability in response_json["vulnerabilities"]:
