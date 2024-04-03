@@ -1,6 +1,6 @@
 from enum import Enum
 import dataclasses
-from .ecosystems.pypi import PyPIPackage, PyPIVersion
+from .ecosystems.pypi import Package, Version
 from .vulnerabilities import Vulnerability
 from typing import ClassVar
 from collections import defaultdict
@@ -61,7 +61,7 @@ class RiskTypes(Enum):
 # Create a type variable bound to class X
 
 
-def inspect_package(package: PyPIPackage, version: PyPIVersion):
+def inspect_package(package: Package, version: Version):
     risks: dict[type[Risk], list[Risk]] = defaultdict(list)
     # Known vulnerabilities.
     for vulnerability in version.vulnerabilities:

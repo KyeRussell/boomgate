@@ -1,8 +1,8 @@
 import typer
 from rich.table import Table
 from rich.console import Console
-from .ecosystems.pypi import PyPI, PyPIPackage
-from .logging import configure_logging
+from .ecosystems.pypi import PyPI, Package
+from .utils.logging import configure_logging
 from typing import Annotated
 from .inspect import inspect_package
 
@@ -23,7 +23,7 @@ def inspect(
     configure_logging(level="DEBUG" if debug else "INFO", console=console)
 
     with console.status("Getting package info..."):
-        package: PyPIPackage = PyPI.get_package(name)
+        package: Package = PyPI.get_package(name)
     print_package_info(package)
     console.print()
 
