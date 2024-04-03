@@ -7,13 +7,14 @@ class FilenameRegex:
         self.filename_regex = filename_regex
 
 
-class Investigator(metaclass=abc.ABCMeta):
-    @abc.abstractmethod
-    def investigate(self, input: Any) -> Any:
-        pass
-
-
 class State(metaclass=abc.ABCMeta):
+    # @abc.abstractmethod
+    # def serialize(self) -> Any:
+    #     pass
+    pass
+
+
+class Investigator(State, metaclass=abc.ABCMeta):
     @abc.abstractmethod
-    def serialize(self) -> Any:
+    def investigate(self) -> Any:
         pass
