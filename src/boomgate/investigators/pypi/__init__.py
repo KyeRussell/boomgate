@@ -2,11 +2,11 @@ from typing import Any
 from pathlib import Path
 from .. import Investigator, FilenameRegex
 import re
-from typing import TypedDict
+from typing import TypedDict, cast
 import dataclasses
 
 
-class ParsedRequirementsLine(TypedDict):
+class RequirementsLineDict(TypedDict):
     package: str
     operator: str
     version: str
@@ -23,37 +23,35 @@ class RequirementsFile(Investigator):
 
     def investigate(self):
         parsed = self.parse_requirements_file(self.content)
-        result = [PyPIRequirement.from_dict(line) for line in parsed]
+        result = [Requirement.from_dict(line) for line in parsed]
         return {"packages": result}
 
     @staticmethod
-    def parse_requirements_file(content: str) -> list[ParsedRequirementsLine]:
+    def parse_requirements_file(content: str) -> list[RequirementsLineDict]:
         lines = content.splitlines()
-        results: list[ParsedRequirementsLine] = []
+        results: list[RequirementsLineDict] = []
         for line in lines:
             match = re.match(
                 r"^(?P<package>[^=<>]+)(?P<operator>[<=>]+)(?P<version>.+)$", line
             )
             if not match:
                 raise ValueError(f"Invalid requirement line: {line}")
-            results.append(match.groupdict())  # type: ignore
+            results.append(cast(RequirementsLineDict, match.groupdict()))
         return results
 
 
 @dataclasses.dataclass
-class PyPIRequirement(Investigator):
-    package: "PyPIPackage"
-
+class Requirement(Investigator):
     @classmethod
-    def from_dict(cls, data: ParsedRequirementsLine):
-        return cls(package=PyPIPackage(data["package"]))
+    def from_dict(cls, data: RequirementsLineDict):
+        return cls()
 
-    def investigate(self) -> Any:
+    def investigate(self):
         return super().investigate()
 
 
 @dataclasses.dataclass
-class PyPIPackage(Investigator):
+class Package(Investigator):
     name: str
 
     def investigate(self) -> Any:
