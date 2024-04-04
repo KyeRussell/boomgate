@@ -9,7 +9,7 @@ description = "A software supply chain risk management tool"
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.11"
-dependencies = ["typer", "rich", "httpx"]
+dependencies = ["typer", "rich", "httpx", "parsley"]
 classifiers = [
     "Development Status :: 1 - Planning",
     "Environment :: Console",
