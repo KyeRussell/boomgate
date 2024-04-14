@@ -1,4 +1,7 @@
 <h1 align="center">Boomgate</h1>
+<p align="center">
+<img src="docs/logo..png" height="200px" />
+</p>
 <p align="center"><em>
     Identify and mitigate the risks of using third-party libraries.
 </em></p>
